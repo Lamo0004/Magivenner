@@ -1,5 +1,5 @@
 ---
-
+import Knap from "./../komponenter/knap.astro"
 ---
 
 <html lang="da">
@@ -9,7 +9,11 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Magivenner</title>
+		<link rel="stylesheet" href="/src/css/global.css" />
 	</head>
 	<body>
+		<Knap variant="primary"> <a href="#">STØT MAGIVENNER</a></Knap>
+		<Knap variant="second"> <a href="#">STØT MAGIVENNER</a></Knap>
+		<Knap variant="third"> <a href="#">STØT MAGIVENNER</a></Knap>
 	</body>
 </html>
