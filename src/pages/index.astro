@@ -10,10 +10,36 @@ import Knap from "./../komponenter/knap.astro"
 		<meta name="generator" content={Astro.generator} />
 		<title>Magivenner</title>
 		<link rel="stylesheet" href="/src/css/global.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<Knap variant="primary"> <a href="#">STØT MAGIVENNER</a></Knap>
-		<Knap variant="second"> <a href="#">STØT MAGIVENNER</a></Knap>
-		<Knap variant="third"> <a href="#">STØT MAGIVENNER</a></Knap>
+		<header>
+			<div class="progress-container">
+    		<div class="progress-bar" id="myBar"></div>
+			</div>
+		</header>
+		<main>
+			<h1>Header 1</h1>
+			<h2>Header 2</h2>
+			<h3>Header 3</h3>
+			<Knap variant="primary"> <a href="#">STØT MAGIVENNER</a></Knap>
+			<Knap variant="second"> <a href="#">STØT</a></Knap>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis asperiores culpa provident deserunt blanditiis possimus excepturi temporibus nesciunt cumque aliquam quaerat architecto aliquid debitis, vitae suscipit a, sequi necessitatibus nihil?</p>
+			<p class="stor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis asperiores culpa provident deserunt blanditiis possimus excepturi temporibus nesciunt cumque aliquam quaerat architecto aliquid debitis, vitae suscipit a, sequi necessitatibus nihil?</p>
+			<p class="lille">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis asperiores culpa provident deserunt blanditiis possimus excepturi temporibus nesciunt cumque aliquam quaerat architecto aliquid debitis, vitae suscipit a, sequi necessitatibus nihil?</p>
+		</main>
 	</body>
 </html>
+
+<script>
+window.addEventListener("scroll", onScroll);
+
+function onScroll() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop; 
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight; 
+  let scrolled = (winScroll / height) * 100; 
+  document.getElementById("myBar").style.width = scrolled + "%"; 
+}
+</script>

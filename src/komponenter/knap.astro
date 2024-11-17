@@ -7,17 +7,44 @@ const { variant } = Astro.props;
 </button>
 
 <style>
+
   .primary {
+    cursor: pointer;
+    padding: 30px;
+    border: none;
+    border-radius: 100px 0px 0px 100px;
+    background: var(--CTA-orange);
+    color: var(--cloud-blue);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 1rem;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 1.4rem;
+    line-height: 160%;
+    font-weight: bold;
+    position: fixed;
+    right: 0rem;
+    bottom: 2rem; 
   }
   .primary:hover {
+    background: var(--cloud-blue);
+    color: var(--CTA-orange);
   }
   .second {
+    cursor: pointer;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 50px;
+    background: var(--cloud-blue);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--dark-blue-color);
+     font-family: "Source Sans 3", sans-serif;
+    font-size: 1.4rem;
+    line-height: 160%;
+    font-weight: bold;
   }
   .second:hover {
-  }
-  .tertiary {
-  }
-  .tertiary:hover {
+    color: var(--cloud-blue);
+    background: var(--dark-blue-color);
   }
 
 </style>
