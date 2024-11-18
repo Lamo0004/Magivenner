@@ -11,23 +11,29 @@ img {
 }
 
 html {
+  background-image: url(/img/bagground.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
   /* Colors */
   --star-blue-dark: #243c56;
   --dark-blue-color: #336396;
   --cloud-blue: #f0f7fe;
   --CTA-orange: #ff9d20;
+  --star-color: #fef8c8;
 }
 
 h1 {
   font-family: "Source Sans 3", sans-serif;
   font-size: 4rem;
   font-weight: bold;
+  color: var(--cloud-blue);
 }
 
 h2 {
   font-family: "Source Sans 3", sans-serif;
   font-size: 2.8rem;
   font-weight: 400;
+  color: var(--cloud-blue);
 }
 
 h3 {
@@ -35,6 +41,14 @@ h3 {
   font-size: 2rem;
   font-weight: bold;
 }
+
+/* h4 { overskrift bruges til meget stort infografik 
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 5.7rem;
+  font-weight: bolder;
+  font-style: italic;
+  color: var(--cloud-blue);
+} */
 
 p {
   font-family: "Source Sans 3", sans-serif;
@@ -44,11 +58,7 @@ p {
 
 .stor {
   font-size: 1.4rem;
-}
-
-.lille {
-  font-size: 0.7rem;
-  line-height: 175%;
+  color: var(--cloud-blue);
 }
 
 a {
@@ -57,8 +67,9 @@ a {
 }
 
 main {
-  height: 5000px;
-} /* Skal slettes senere */
+  margin-inline: 1rem;
+  height: 5000px; /* Skal slettes senere */
+}
 
 /* Progress container */
 .progress-container {
@@ -71,4 +82,84 @@ main {
   height: 5px;
   background: var(--CTA-orange);
   width: 0%;
+}
+
+.logo_container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  max-width: 40rem;
+  margin-top: 5rem;
+}
+
+.info {
+  background-image: url(/img/magican.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.boks {
+  background-color: var(--cloud-blue);
+  color: var(--dark-blue-color);
+  padding: 1rem;
+  margin-bottom: 10rem;
+}
+
+.statistik {
+  text-align: center;
+}
+
+.kursiv {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+span {
+  font-size: 4rem;
+  vertical-align: -1.5rem;
+}
+
+.slut {
+  text-align: center;
+}
+
+.ballon_1 {
+  width: 6rem;
+  place-items: end end;
+}
+
+.ballon_2 {
+  width: 11rem;
+  place-items: end end;
+}
+
+.ballon_3 {
+  width: 16rem;
+  place-items: end end;
+}
+
+.farve {
+  color: var(--star-color);
+}
+
+@media (min-width: 750px) {
+  main {
+    margin-inline: 6.25rem;
+  }
+
+  .boks {
+    max-width: 37.5rem;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-block: 2rem;
+  }
 }

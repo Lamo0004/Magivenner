@@ -21,32 +21,88 @@ import Knap from "./../komponenter/knap.astro"
 			</div>
 		</header>
 		<main>
-			<h1>Header 1</h1>
-			<h2>Header 2</h2>
-
-			<div class="">
+			<Knap variant="primary"> <a href="#">STØT MAGIVENNER</a></Knap>
+			<div class="logo_container">
+			<img class="logo" src="/img/logo.svg" alt="logo">
+			</div>
+			<section class="info">
+			<div class="boks">
 			<h3>Hvad er Magivenner?</h3>
-			<p>Magivenner er et magisk univers med trylleri, hvor vores magikere er til stede på alle landets børneafdelinger og invitere børn og deres familier ind under den magiske paraply med magi og glæde. Målet er at børnene bliver opslugt at de spændende magiske tricks og får en pause fra sygdom, kedelig ventetid, frygt for ubehag eller sorg. 
-			Magivenner skaber lys i en svær tid for syge børn og deres familier på hospitalerne, som stjernerne der oplyser natten!
+			<p>Magivenner er et magisk univers med trylleri, hvor vores magikere er til stede på alle landets børneafdelinger og invitere børn og deres familier ind under den magiske paraply med magi og glæde. Målet er at børnene bliver opslugt at de spændende magiske tricks og får en pause fra sygdom, kedelig ventetid, frygt for ubehag eller sorg. <br> 
+			Magivenner skaber lys i en svær tid for syge børn og deres familier på hospitalerne, som stjernerne der oplyser natten!<br><br>
 			Magivenner underholder børn i alle aldre. Børnene underholdes med tricks og ballondyr, som kan give glæde og grin til børnene og deres familier i en mørk tid.  De større børn kan lære små trylletricks, så de kan øve sig og trylle videre foran vennerne, når de bliver udskrevet, eller når disse kommer på besøg.</p>
 			</div>
-			<div>
+			<div class="boks">
 			<h3>Hvem er Magivenner?</h3>
-			<p>Magivenner er et univers bestående af syv professionelle tryllekunstnere, som er rundt på forskellige hospitaler i hele Danmark. Vores tryllekunstnere er alle forskellige, men har alle samme vision – at lyse en svær tid op for syge børn. 
-			Magivennerne: 
-            Birger tryller i Viborg & Odense 
-            Henny Solskin tryller i Herning
-            Fabelagtig Falbe tryller i Roskilde & Holbæk 
-            Rasmus Fup & Fidus tryller på Århus & i Familiehuset 
-            Trylle Michael tryller på Riget 
-            Lasse NK tryller på Herlev, Hvidovre og Gram slot
-            Helle tryller i Koldning & Vejle</p>
+			<p>Magivenner er et univers bestående af syv professionelle tryllekunstnere, som er rundt på forskellige hospitaler i hele Danmark. Vores tryllekunstnere er alle forskellige, men har alle samme vision – at lyse en svær tid op for syge børn.<br><br> 
+			Magivennerne:<br>  
+            Birger tryller i Viborg & Odense<br>  
+            Henny Solskin tryller i Herning<br> 
+            Fabelagtig Falbe tryller i Roskilde & Holbæk<br>  
+            Rasmus Fup & Fidus tryller på Århus & i Familiehuset<br>  
+            Trylle Michael tryller på Riget<br>  
+            Lasse NK tryller på Herlev, Hvidovre og Gram slot<br> 
+            Helle tryller i Koldning & Vejle<br></p>
 			</div>
-			<Knap variant="primary"> <a href="#">STØT MAGIVENNER</a></Knap>
-			<Knap variant="second"> <a href="#">STØT</a></Knap>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis asperiores culpa provident deserunt blanditiis possimus excepturi temporibus nesciunt cumque aliquam quaerat architecto aliquid debitis, vitae suscipit a, sequi necessitatibus nihil?</p>
-			<p class="stor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis asperiores culpa provident deserunt blanditiis possimus excepturi temporibus nesciunt cumque aliquam quaerat architecto aliquid debitis, vitae suscipit a, sequi necessitatibus nihil?</p>
-			<p class="lille">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis asperiores culpa provident deserunt blanditiis possimus excepturi temporibus nesciunt cumque aliquam quaerat architecto aliquid debitis, vitae suscipit a, sequi necessitatibus nihil?</p>
+			</section>
+			<section class="statistik">
+			<h1>Sådan hjælper vi</h1>
+			<div class="grid_1-1-1">
+				<div>
+				<h1 class="kursiv">7</h1>
+				<p class="stor">Hospitaler har Magivennerne deres
+				daglige gang på</p>
+				</div>
+				<div>
+				<h1 class="kursiv">50</h1>
+				<p class="stor">Børn får besøg af en Magiven 
+				på hospitalet hver dag</p>
+				</div>
+				<div>
+				<h1 class="kursiv">1.000.000</h1>
+				<p class="stor">Danske kroner har vi indsamlet til 
+				Magivennerne i år</p>
+				</div>
+			</div>
+			</section>
+			<video width="320" height="240" controls>
+				<source src="/img/Magivennerne.mp4" type="video/mp4">
+			</video>
+			<section class="citater">
+				<div class="citat_1">
+				<p class="stor"><span>“</span>At høre vores søn grine og være i øjeblikket var en gave. <br> Magien var ikke kun for ham, men for hele familien.<span>“</span></p>
+				<p class="stor bold">- Marianne, mor til Helmut på 6 år</p>
+				</div>
+				<div class="citat_2">
+				<p class="stor"><span>“</span>Da min Magiven kom ind på min stue glemte jeg alt <br> om nåle og medicin. Det var rigtig sjovt!<span>“</span></p>
+				<p class="stor bold">- Arthur på 11 år</p>
+				</div>
+				<div class="citat_3">
+				<p class="stor"><span>“</span>At se min datter så glad og ubekymret var virkelig uvurderligt. <br> For en stund følte vi begge, at vi var et helt andet sted.<span>“</span></p>
+				<p class="stor bold">- Christian, far til Sigga 4 år</p>
+				</div>
+			</section>
+			<section class="slut">
+				<h1>GØR EN FORSKEL</h1>
+				<div class="grid_1-1-1">
+					<div>
+						<img class="ballon_1" src="/img/ballondog.svg" alt="ballondyr">
+						<h2 class="bold farve">100 Kroner</h2>
+						<Knap variant="second"> <a href="#">STØT NU</a></Knap>
+					</div>
+					<div>
+						<img class="ballon_2" src="/img/ballondog.svg" alt="ballondyr">
+						<h2 class="bold farve">250 Kroner</h2>
+						<Knap variant="second"> <a href="#">STØT NU</a></Knap>
+					</div>
+					<div>
+						<img class="ballon_3" src="/img/ballondog.svg" alt="ballondyr">
+						<h2 class="bold farve">500 Kroner</h2>
+						<Knap variant="second"> <a href="#">STØT NU</a></Knap>
+					</div>
+				</div>
+				<h2>Alle børn har brug for en ven <br> nogle gange en MAGIVEN</h2>
+			</section>
 		</main>
 	</body>
 </html>
