@@ -17,7 +17,7 @@ import Knap from "./../komponenter/knap.astro"
 	<body>
 		<header>
 			<div class="progress-container">
-    		<div class="progress-bar" id="myBar"></div>
+    		<div class="progress-bar" id="bar"></div>
 			</div>
 		</header>
 		<main>
@@ -25,6 +25,7 @@ import Knap from "./../komponenter/knap.astro"
 			<div class="logo_container">
 			<img class="logo" src="/img/logo.svg" alt="logo">
 			</div>
+			<p>ARROW</p>
 			<section class="info">
 			<div class="boks">
 			<h3>Hvad er Magivenner?</h3>
@@ -45,8 +46,9 @@ import Knap from "./../komponenter/knap.astro"
             Helle tryller i Koldning & Vejle<br></p>
 			</div>
 			</section>
+			<img class="bog" src="img/book.svg" alt="magi bog">
 			<section class="statistik">
-			<h1>Sådan hjælper vi</h1>
+			<h1>SÅDAN HJÆLPER VI</h1>
 			<div class="grid_1-1-1">
 				<div>
 				<h1 class="kursiv">7</h1>
@@ -65,55 +67,88 @@ import Knap from "./../komponenter/knap.astro"
 				</div>
 			</div>
 			</section>
-			<video width="320" height="240" controls>
+			<video class="video" width="80%" height="auto" controls>
 				<source src="/img/Magivennerne.mp4" type="video/mp4">
 			</video>
-			<section class="citater">
-				<div class="citat_1">
-				<p class="stor"><span>“</span>At høre vores søn grine og være i øjeblikket var en gave. <br> Magien var ikke kun for ham, men for hele familien.<span>“</span></p>
+			<div class="citat_grid">
+			<section class="citat">
+				<p class="stor"><span>“</span>At høre vores søn grine og være i øjeblikket var en gave. Magien var ikke kun for ham, men for hele familien.<span>“</span></p>
 				<p class="stor bold">- Marianne, mor til Helmut på 6 år</p>
-				</div>
-				<div class="citat_2">
-				<p class="stor"><span>“</span>Da min Magiven kom ind på min stue glemte jeg alt <br> om nåle og medicin. Det var rigtig sjovt!<span>“</span></p>
-				<p class="stor bold">- Arthur på 11 år</p>
-				</div>
-				<div class="citat_3">
-				<p class="stor"><span>“</span>At se min datter så glad og ubekymret var virkelig uvurderligt. <br> For en stund følte vi begge, at vi var et helt andet sted.<span>“</span></p>
-				<p class="stor bold">- Christian, far til Sigga 4 år</p>
-				</div>
 			</section>
+			<section class="citat">
+				<p class="stor"><span>“</span>Da min Magiven kom ind på min stue glemte jeg alt om nåle og medicin. Det var rigtig sjovt!<span>“</span></p>
+				<p class="stor bold">- Arthur på 11 år</p>
+			</section>
+			<section class="citat">
+				<p class="stor"><span>“</span>At se min datter så glad og ubekymret var virkelig uvurderligt. For en stund følte vi begge, at vi var et helt andet sted.<span>“</span></p>
+				<p class="stor bold">- Christian, far til Sigga 4 år</p>
+			</section>
+			</div>
 			<section class="slut">
 				<h1>GØR EN FORSKEL</h1>
 				<div class="grid_1-1-1">
-					<div>
+					<div class="støt">
 						<img class="ballon_1" src="/img/ballondog.svg" alt="ballondyr">
 						<h2 class="bold farve">100 Kroner</h2>
 						<Knap variant="second"> <a href="#">STØT NU</a></Knap>
 					</div>
-					<div>
+					<div class="støt">
 						<img class="ballon_2" src="/img/ballondog.svg" alt="ballondyr">
 						<h2 class="bold farve">250 Kroner</h2>
 						<Knap variant="second"> <a href="#">STØT NU</a></Knap>
 					</div>
-					<div>
+					<div class="støt">
 						<img class="ballon_3" src="/img/ballondog.svg" alt="ballondyr">
 						<h2 class="bold farve">500 Kroner</h2>
 						<Knap variant="second"> <a href="#">STØT NU</a></Knap>
 					</div>
 				</div>
-				<h2>Alle børn har brug for en ven <br> nogle gange en MAGIVEN</h2>
+				<h2 class="slogan">Alle børn har brug for en ven nogle gange en MAGIVEN</h2>
 			</section>
 		</main>
 	</body>
 </html>
 
-<script>
+<script type="module">
 window.addEventListener("scroll", onScroll);
 
 function onScroll() {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop; 
   let height = document.documentElement.scrollHeight - document.documentElement.clientHeight; 
   let scrolled = (winScroll / height) * 100; 
-  document.getElementById("myBar").style.width = scrolled + "%"; 
+  document.getElementById("bar").style.width = scrolled + "%"; 
 }
+
+import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm"
+
+const alleCitater = document.querySelectorAll(".citat")
+
+alleCitater.forEach((eachSection) => {
+	scroll(animate(eachSection, { opacity: [0,1,0] }, {ease:"ease-in-out "}), {
+	target: eachSection,
+	offset: ["20% 90%", "90% 20%"],
+})
+});
+
+// scroll(animate(".citater", { opacity: [0,1]}), {
+// target: document.querySelector(".citater"),
+// offset: ["start start", "end start"],
+// })
+
+// document.getElementById('citat_container_1').addEventListener('mouseenter', citaterForsvind1);
+// document.getElementById('citat_container_2').addEventListener('mouseenter', citaterForsvind2);
+// document.getElementById('citat_container_3').addEventListener('mouseenter', citaterForsvind3);
+
+// function citaterForsvind1() {
+// 	document.querySelector("#citat_container_1").classList.add("opacity")
+// }
+
+// function citaterForsvind2() {
+// 	document.querySelector("#citat_container_2").classList.add("opacity")
+// }
+
+// function citaterForsvind3() {
+// 	document.querySelector("#citat_container_3").classList.add("opacity")
+// }
+
 </script>

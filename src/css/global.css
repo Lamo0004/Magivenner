@@ -18,6 +18,7 @@ html {
   --star-blue-dark: #243c56;
   --dark-blue-color: #336396;
   --cloud-blue: #f0f7fe;
+  --cloud-blue-transparant: #f0f7fe20;
   --CTA-orange: #ff9d20;
   --star-color: #fef8c8;
 }
@@ -61,6 +62,14 @@ p {
   color: var(--cloud-blue);
 }
 
+.kursiv {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -68,20 +77,20 @@ a {
 
 main {
   margin-inline: 1rem;
-  height: 5000px; /* Skal slettes senere */
 }
 
 /* Progress container */
 .progress-container {
   position: fixed;
+  height: 5px;
   width: 100%;
 }
 
 /* Progress bar – indikatoren på, hvor langt man er scrollet (den orage) */
 .progress-bar {
   height: 5px;
-  background: var(--CTA-orange);
   width: 0%;
+  background: var(--CTA-orange);
 }
 
 .logo_container {
@@ -97,26 +106,34 @@ main {
 .info {
   background-image: url(/img/magican.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 300px;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .boks {
   background-color: var(--cloud-blue);
   color: var(--dark-blue-color);
   padding: 1rem;
-  margin-bottom: 10rem;
+  margin-top: 10rem;
+  margin-bottom: 30rem;
+}
+
+.bog {
+  width: 80%;
+  display: block;
+  margin-inline: auto;
 }
 
 .statistik {
+  margin-top: 5rem;
   text-align: center;
 }
 
-.kursiv {
-  font-style: italic;
-}
-
-.bold {
-  font-weight: bold;
+.video {
+  margin-top: 20rem;
+  display: block;
+  margin-inline: auto;
 }
 
 span {
@@ -124,27 +141,52 @@ span {
   vertical-align: -1.5rem;
 }
 
+.citat_grid {
+  display: grid;
+  place-items: center;
+}
+
+.citat {
+  padding-block: 25rem;
+  max-width: 600px;
+}
+
 .slut {
   text-align: center;
+  margin-top: 10rem;
+}
+
+.støt {
+  margin-block: 5rem;
 }
 
 .ballon_1 {
   width: 6rem;
-  place-items: end end;
+  display: block;
+  margin-inline: auto;
 }
 
 .ballon_2 {
   width: 11rem;
-  place-items: end end;
+  display: block;
+  margin-inline: auto;
 }
 
 .ballon_3 {
   width: 16rem;
-  place-items: end end;
+  display: block;
+  margin-inline: auto;
 }
 
 .farve {
   color: var(--star-color);
+}
+
+.slogan {
+  margin-bottom: 10rem;
+  max-width: 540px;
+  display: block;
+  margin-inline: auto;
 }
 
 @media (min-width: 750px) {
