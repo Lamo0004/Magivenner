@@ -103,13 +103,37 @@ main {
   margin-top: 5rem;
 }
 
+.pil {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  width: 40px;
+  display: block;
+  margin-inline: auto;
+  animation-name: pil_kf;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes pil_kf {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(180%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 .info {
   background-image: url(/img/magican.svg);
   background-repeat: no-repeat;
   background-size: 300px;
   background-position: center;
   background-attachment: fixed;
-  padding-bottom: 8rem;
+  padding-block: 8rem;
 }
 
 .boks {
@@ -120,14 +144,25 @@ main {
   margin-bottom: 30rem;
 }
 
+.indryk {
+  margin-left: 2rem;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 1rem;
+  line-height: 160%;
+}
+
 .bog {
   width: 80%;
+  max-width: 500px;
   display: block;
   margin-inline: auto;
 }
 
 .statistik {
   margin-top: 5rem;
+}
+
+.statistik h1 {
   text-align: center;
 }
 
@@ -158,7 +193,7 @@ main {
 }
 
 .støt {
-  margin-block: 5rem;
+  margin-block: 3rem;
 }
 
 .ballon_1 {
@@ -184,7 +219,7 @@ main {
 }
 
 .slogan {
-  margin-bottom: 10rem;
+  margin-bottom: 8rem;
   max-width: 550px;
   display: block;
   margin-inline: auto;
@@ -198,6 +233,15 @@ main {
 .non_fed {
   font-weight: 400;
   vertical-align: middle;
+}
+
+/********* MOBIL *********/
+@media (max-width: 750px) {
+  .statistik {
+    max-width: 330px;
+    display: block;
+    margin-inline: auto;
+  }
 }
 
 /********* DESKTOP *********/
@@ -214,10 +258,21 @@ main {
     background-position: 80%; /*tryllekunstnerens placering på baggrunden*/
   }
 
-  .grid_1-1-1 {
+  .stat_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .slut_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     place-items: end center;
+  }
+
+  .citat_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
