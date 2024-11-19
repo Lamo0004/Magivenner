@@ -1,4 +1,5 @@
 ---
+import "../css/global.css"
 import Knap from "./../komponenter/knap.astro"
 ---
 
@@ -9,7 +10,6 @@ import Knap from "./../komponenter/knap.astro"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Magivenner</title>
-		<link rel="stylesheet" href="/src/css/global.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Staatliches&display=swap" rel="stylesheet">
@@ -72,20 +72,20 @@ import Knap from "./../komponenter/knap.astro"
 			</video>
 			<div class="citat_grid">
 			<section class="citat">
-				<p class="stor"><span>“</span>At høre vores søn grine og være i øjeblikket var en gave. Magien var ikke kun for ham, men for hele familien.<span>“</span></p>
+				<p class="stor"><span class="tegn">“</span>At høre vores søn grine og være i øjeblikket var en gave. Magien var ikke kun for ham, men for hele familien.<span>“</span></p>
 				<p class="stor bold">- Marianne, mor til Helmut på 6 år</p>
 			</section>
 			<section class="citat">
-				<p class="stor"><span>“</span>Da min Magiven kom ind på min stue glemte jeg alt om nåle og medicin. Det var rigtig sjovt!<span>“</span></p>
+				<p class="stor"><span class="tegn">“</span>Da min Magiven kom ind på min stue glemte jeg alt om nåle og medicin. Det var rigtig sjovt!<span>“</span></p>
 				<p class="stor bold">- Arthur på 11 år</p>
 			</section>
 			<section class="citat">
-				<p class="stor"><span>“</span>At se min datter så glad og ubekymret var virkelig uvurderligt. For en stund følte vi begge, at vi var et helt andet sted.<span>“</span></p>
+				<p class="stor"><span class="tegn">“</span>At se min datter så glad og ubekymret var virkelig uvurderligt. For en stund følte vi begge, at vi var et helt andet sted.<span>“</span></p>
 				<p class="stor bold">- Christian, far til Sigga 4 år</p>
 			</section>
 			</div>
 			<section class="slut">
-				<h1>GØR EN FORSKEL</h1>
+				<h1><span class="non_fed">GØR EN </span>FORSKEL</h1>
 				<div class="grid_1-1-1">
 					<div class="støt">
 						<img class="ballon_1" src="/img/ballondog.svg" alt="ballondyr">
@@ -103,7 +103,7 @@ import Knap from "./../komponenter/knap.astro"
 						<Knap variant="second"> <a href="#">STØT NU</a></Knap>
 					</div>
 				</div>
-				<h2 class="slogan">Alle børn har brug for en ven nogle gange en MAGIVEN</h2>
+				<h2 class="slogan">Alle børn har brug for en ven nogle gange en <span class="fed">MAGIVEN</span></h2>
 			</section>
 		</main>
 	</body>

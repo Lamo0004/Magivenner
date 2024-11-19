@@ -109,6 +109,7 @@ main {
   background-size: 300px;
   background-position: center;
   background-attachment: fixed;
+  padding-bottom: 8rem;
 }
 
 .boks {
@@ -136,7 +137,7 @@ main {
   margin-inline: auto;
 }
 
-span {
+.tegn {
   font-size: 4rem;
   vertical-align: -1.5rem;
 }
@@ -184,11 +185,22 @@ span {
 
 .slogan {
   margin-bottom: 10rem;
-  max-width: 540px;
+  max-width: 550px;
   display: block;
   margin-inline: auto;
 }
 
+.fed {
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.non_fed {
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+/********* DESKTOP *********/
 @media (min-width: 750px) {
   main {
     margin-inline: 6.25rem;
@@ -198,10 +210,14 @@ span {
     max-width: 37.5rem;
   }
 
+  .info {
+    background-position: 80%; /*tryllekunstnerens placering på baggrunden*/
+  }
+
   .grid_1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    margin-block: 2rem;
+    place-items: end center;
   }
 }
