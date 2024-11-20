@@ -158,16 +158,12 @@ main {
   margin-inline: auto;
 }
 
-.statistik {
-  margin-top: 5rem;
-}
-
 .statistik h1 {
   text-align: center;
 }
 
 .video {
-  margin-top: 20rem;
+  margin-top: 25rem;
   display: block;
   margin-inline: auto;
 }
@@ -233,6 +229,13 @@ main {
 .non_fed {
   font-weight: 400;
   vertical-align: middle;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 /********* MOBIL *********/
